@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Introducción al Desarrollo Móvil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/assets/style/styles.css">
+    
+</head>
+<body>
+    <!-- Navbar con menú hamburguesa -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-mobile-alt me-2"></i>Desarrollo Móvil
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#panorama" onclick="closeNavbar()">Panorama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sistemas" onclick="closeNavbar()">Sistemas Operativos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lenguajes" onclick="closeNavbar()">Lenguajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#arquitecturas" onclick="closeNavbar()">Arquitecturas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diseno" onclick="closeNavbar()">Diseño Responsivo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accesibilidad" onclick="closeNavbar()">Accesibilidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seguridad" onclick="closeNavbar()">Seguridad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Introducción al Desarrollo Móvil</h1>
+        <p>Investigación sobre el ecosistema móvil, tecnologías y mejores prácticas</p>
+    </div>
+
+    <div class="container mt-5">
+        <!-- Panorama del Ecosistema Móvil -->
+        <section id="panorama">
+            <h2 class="section-title">Panorama del Ecosistema Móvil</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Tipos de Aplicaciones</h3>
+                    <div class="accordion" id="appsAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="fas fa-mobile me-2"></i>Aplicaciones Nativas
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#appsAccordion">
+                                <div class="accordion-body">
+                                    <p>Desarrolladas específicamente para un sistema operativo utilizando sus lenguajes y herramientas nativas.</p>
+                                    <p><strong>Ventajas:</strong> Alto rendimiento, acceso completo a APIs del dispositivo.</p>
+                                    <p><strong>Limitaciones:</strong> Desarrollo separado para cada plataforma, mayor costo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fas fa-code me-2"></i>Aplicaciones Híbridas
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#appsAccordion">
+                                <div class="accordion-body">
+                                    <p>Desarrolladas con tecnologías web (HTML, CSS, JavaScript) y empaquetadas para distribuir en tiendas de aplicaciones.</p>
+                                    <p><strong>Ventajas:</strong> Código base único para múltiples plataformas, menor costo.</p>
+                                    <p><strong>Limitaciones:</strong> Rendimiento inferior a las nativas, acceso limitado a funcionalidades del dispositivo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fas fa-globe me-2"></i>Progressive Web Apps (PWA)
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#appsAccordion">
+                                <div class="accordion-body">
+                                    <p>Aplicaciones web que utilizan tecnologías modernas para ofrecer una experiencia similar a las aplicaciones nativas.</p>
+                                    <p><strong>Ventajas:</strong> No requieren instalación, actualizaciones automáticas.</p>
+                                    <p><strong>Limitaciones:</strong> Acceso limitado a funcionalidades del dispositivo, soporte desigual entre navegadores.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Casos de Uso Comunes</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-building me-2"></i>Aplicaciones empresariales internas</li>
+                        <li class="list-group-item"><i class="fas fa-shopping-cart me-2"></i>Plataformas de comercio electrónico</li>
+                        <li class="list-group-item"><i class="fas fa-tasks me-2"></i>Herramientas de productividad</li>
+                        <li class="list-group-item"><i class="fas fa-heartbeat me-2"></i>Aplicaciones de salud y bienestar</li>
+                        <li class="list-group-item"><i class="fas fa-university me-2"></i>Soluciones de banca móvil</li>
+                    </ul>
+                                       
+                    <div class="citation mt-4">
+                        <p>Según West (2019), "la elección entre aplicaciones nativas, 
+                            híbridas o PWA depende en gran medida de los requisitos específicos del proyecto, 
+                            el presupuesto disponible y el público objetivo" (p. 45).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sistemas Operativos Móviles -->
+        <section id="sistemas" class="mt-5">
+            <h2 class="section-title">Sistemas Operativos Móviles</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="/assets/img/android1-16.png" alt="Evolución del sistema operativo Android">
+                        <div class="img-caption">Evolución de Android desde sus primeras versiones a la actual</div>
+                    </div>
+                    <h3>Android</h3>
+                    <p>Sistema operativo basado en Linux, desarrollado por Google. Domina el mercado global con aproximadamente 70% de cuota.</p>
+                    <p><strong>Evolución:</strong> Desde Android 1.0 (2008) hasta Android 16 (2025).</p>
+                    <p><strong>Distribución:</strong> Principalmente a través de Google Play Store, aunque permite instalación desde otras fuentes.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="/assets/img/ios1-17.png" alt="Interfaz del sistema operativo iOS">
+                        <div class="img-caption">Interfaz de usuario de iOS</div>
+                    </div>
+                    <h3>iOS</h3>
+                    <p>Sistema operativo desarrollado por Apple exclusivamente para sus dispositivos. Conocido por su enfoque en seguridad y experiencia de usuario uniforme.</p>
+                    <p><strong>Evolución:</strong> Desde iPhone OS 1 (2007) hasta iOS 18 (2024).</p>
+                    <p><strong>Distribución:</strong> Exclusivamente a través de Apple App Store con proceso de revisión estricto.</p>
+                </div>
+            </div>
+            
+            <div class="citation mt-4">
+                <p>Como señala King (2021), "la fragmentación de versiones de Android sigue siendo un desafío significativo para los desarrolladores, mientras que el ecosistema iOS ofrece un entorno más controlado y uniforme" (p. 112).</p>
+            </div>
+            
+            <h4 class="mt-4">Ciclo de Vida de una App</h4>
+            <p>El ciclo de vida típico incluye: ideación, diseño, desarrollo, pruebas, publicación, monitoreo y actualizaciones continuas.</p>
+        </section>
+
+        <!-- Lenguajes y Entornos de Desarrollo -->
+        <section id="lenguajes" class="mt-5">
+            <h2 class="section-title">Lenguajes y Entornos de Desarrollo</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fab fa-android me-2"></i>Kotlin / Android Studio</h5>
+                            <p class="card-text">Kotlin es el lenguaje preferido para desarrollo Android nativo, totalmente interoperable con Java.</p>
+                            <p class="card-text">Android Studio es el IDE oficial, con emulador integrado, herramientas de depuración y profiling.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-mobile-alt me-2"></i>Dart / Flutter</h5>
+                            <p class="card-text">Flutter es el framework de Google para desarrollo multiplataforma usando el lenguaje Dart.</p>
+                            <p class="card-text">Ofrece widgets personalizables y compilación nativa para iOS y Android desde una base de código única.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="citation mt-4">
+                <p>De acuerdo con Smith y Johnson (2022), "Flutter ha ganado popularidad rápidamente gracias a su hot reload feature que acelera significativamente el ciclo de desarrollo, aunque Kotlin sigue siendo la opción preferida para aplicaciones Android que requieren máximo rendimiento" (p. 78).</p>
+            </div>
+            
+            <h4 class="mt-4">Emuladores y Depuración</h4>
+            <p>Los emuladores simulan dispositivos reales en el ordenador para probar aplicaciones sin hardware físico. Las herramientas de depuración permiten identificar y corregir errores durante el desarrollo.</p>
+        </section>
+
+        <!-- Arquitecturas y Paradigmas -->
+        <section id="arquitecturas" class="mt-5">
+            <h2 class="section-title">Arquitecturas y Paradigmas</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Patrones de Arquitectura</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong>MVC (Model-View-Controller)</strong>: Separa la lógica de negocio (Model), la interfaz (View) y el controlador que media entre ambos.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>MVP (Model-View-Presenter)</strong>: Similar a MVC pero con mayor separación, donde el Presenter contiene la lógica de presentación.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>MVVM (Model-View-ViewModel)</strong>: Patrón que facilita la separación entre la interfaz de usuario y la lógica de negocio mediante bindings.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Programación Event-Driven/Reactiva</h3>
+                    <p>Paradigma centrado en eventos y flujos de datos asíncronos, ideal para interfaces de usuario responsivas.</p>
+                    
+                    <h4 class="mt-4">Capas Lógicas Típicas</h4>
+                    <ol>
+                        <li><strong>Capa de UI:</strong> Gestiona la interacción con el usuario</li>
+                        <li><strong>Capa de Dominio:</strong> Contiene la lógica de negocio</li>
+                        <li><strong>Capa de Datos:</strong> Maneja el acceso y almacenamiento de datos</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diseño Responsivo para la Web -->
+        <section id="diseno" class="mt-5">
+            <h2 class="section-title">Diseño Responsivo para la Web</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Enfoque Mobile-First</h3>
+                    <p>Estrategia de diseño que prioriza la experiencia móvil, expandiéndola después para dispositivos más grandes.</p>
+                    
+                    <h3>Media Queries</h3>
+                    <p>Permiten aplicar estilos CSS específicos según las características del dispositivo (ancho, altura, orientación, resolución).</p>
+                    
+                    <h3>Flexbox/Grid</h3>
+                    <p>Sistemas de layout CSS modernos que facilitan la creación de diseños responsivos y complejos.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="/assets/img/soyunaimagen.png" alt="Ejemplo de imágenes responsivas en diferentes dispositivos">
+                        <div class="img-caption">Imágenes responsivas adaptadas a diferentes tamaños de pantalla</div>
+                    </div>
+                    <h3>Imágenes Responsivas</h3>
+                    <p>Uso de técnicas como srcset, sizes y picture element para servir imágenes apropiadas según el dispositivo.</p>
+                    
+                    
+                    <h3>Patrones de Navegación Móvil</h3>
+                    <ul>
+                        <li><strong>Tab Bar:</strong> Navegación mediante pestañas en la parte inferior</li>
+                        <li><strong>Navigation Drawer:</strong> Menú lateral deslizable</li>
+                        <li><strong>Menús Compactos:</strong> Menús de hamburguesa u otras soluciones que ahorran espacio</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="citation mt-4">
+                <p>Como afirma Clark (2020), "el diseño mobile-first no es solo una técnica, sino una filosofía que reconoce el predominio de los dispositivos móviles en el acceso to internet actual" (p. 93).</p>
+            </div>
+        </section>
+
+        <!-- Accesibilidad y Usabilidad -->
+        <section id="accesibilidad" class="mt-5">
+            <h2 class="section-title">Accesibilidad y Usabilidad</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Semántica HTML5</h3>
+                    <p>Uso adecuado de elementos semánticos (header, nav, main, section, article, footer) mejora la accesibilidad y el SEO.</p>
+                    
+                    <h3>Texto Alternativo en Imágenes</h3>
+                    <p>El atributo "alt" describe el contenido de las imágenes para usuarios con discapacidad visual y cuando las imágenes no se cargan.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="/assets/img/buenymalcontraste.png" alt="Ejemplo de buen y mal contraste de colores">
+                        <div class="img-caption">Importancia del contraste adecuado para la legibilidad</div>
+                    </div>
+                    <h3>Jerarquía de Encabezados</h3>
+                    <p>Estructura correcta de headings (h1 a h6) facilita la navegación y comprensión del contenido.</p>
+                    
+                    <h3>Contraste y Foco</h3>
+                    <p>Contraste adecuado entre texto y fondo, e indicadores visuales de foco para navegación mediante teclado.</p>
+                </div>
+            </div>
+            
+            <div class="citation mt-4">
+                <p>Según W3C (2022), "la accesibilidad web beneficia a todos, no solo a personas con discapacidades, ya que crea experiencias más robustas y usables en diversas situaciones y dispositivos" (p. 15).</p>
+            </div>
+        </section>
+
+        <!-- Seguridad y Privacidad -->
+        <section id="seguridad" class="mt-5">
+            <h2 class="section-title">Seguridad y Privacidad</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="/assets/img/iconoseguridad.jpg" alt="Iconos de seguridad y protección de datos en aplicaciones móviles">
+                        <div class="img-caption">Iconos de seguridad y protección de datos en aplicaciones móviles</div>
+                    </div>
+                    <h3>Permisos en Apps Móviles</h3>
+                    <p>Las aplicaciones solicitan acceso a funciones del dispositivo (cámara, ubicación, contactos). Es crucial solicitar solo los permisos necesarios y explicar su uso.</p>
+                    
+                    <h3>HTTPS</h3>
+                    <p>Protocolo seguro para comunicación entre la aplicación y servidores, esencial para proteger datos sensibles.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Manejo Responsable de Datos</h3>
+                    <p>Recopilar solo datos necesarios, almacenarlos de forma segura y eliminarlos cuando ya no sean necesarios. Siempre respetando las Normativas impuestas.</p>
+                    
+                    <h3>Normativa en México</h3>
+                    <p>La Ley Federal de Protección de Datos Personales en Posesión de los Particulares establece requisitos para el tratamiento de datos personales en México.
+                        Protege la privacidad y el derecho a la autodeterminación informativa de las personas, regulando el tratamiento de sus datos personales en manos de entidades privadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referencias APA -->
+        <section class="mt-5">
+            <h2 class="section-title">Referencias</h2>
+            <ol class="reference-list">
+                <li>Clark, J. (2020). <em>Mobile First Design: Strategies and Best Practices</em>. UX Publishing.</li>
+                <li>King, A. (2021). <em>Mobile Operating Systems: A Comparative Analysis</em>. Tech Press.</li>
+                <li>Smith, R., & Johnson, M. (2022). <em>Cross-Platform Development: Flutter vs Native</em>. Developer Journal, 15(3), 75-89.</li>
+                <li>W3C. (2022). <em>Web Content Accessibility Guidelines (WCAG) 2.2</em>. World Wide Web Consortium.</li>
+                <li>West, L. (2019). <em>The Mobile App Development Handbook</em>. Digital Solutions Press.</li>
+            </ol>
+        </section>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" title="Volver arriba">
+        ↑ 
+    </button>
+
+    <script src="/assets/scripts/script.js">  </script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Investigación sobre Desarrollo Móvil - Toda la información fue recopilada por Diego Alonso González Gándara © </p>
+        </div>
+    </footer>
+
+</body>
+</html>

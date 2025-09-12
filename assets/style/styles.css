@@ -1,0 +1,221 @@
+
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Citas destacadas */
+        .citation {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Efecto hover en elementos de navegación */
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        /* Títulos de sección */
+        .section-title {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+        }
+
+
+        /* Lista de referencias */
+        .reference-list {
+            font-size: 0.9rem;
+        }
+
+        .reference-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos mejorados para el menú hamburguesa */
+        .navbar-toggler {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.25rem 0.5rem;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+            outline: none;
+        }
+
+        /* Mejoras para móviles */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+            
+            .nav-item {
+                margin: 0.2rem 0;
+            }
+            
+            .nav-link {
+                padding: 0.8rem 1rem;
+                border-radius: 0.25rem;
+            }
+        }
+
+        /* Media Queries para diseño responsivo */
+        .container {
+            padding: 0 15px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        /* Imágenes responsivas */
+        .img-container {
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .img-caption {
+            padding: 10px;
+            background-color: #f8f9fa;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Breakpoint para tablets pequeñas (≥415px) */
+        @media (min-width: 415px) {
+            .container {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* Breakpoint para tablets grandes y escritorio (≥768px) */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .citation {
+                font-size: 1rem;
+            }
+        }
+
+        /* Breakpoint para pantallas grandes (≥992px) */
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        /* Breakpoint para pantallas extra grandes (≥1200px) */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        /* Mejoras de accesibilidad */
+        a:focus {
+            outline: 2px solid #0d6efd;
+            outline-offset: 2px;
+        }
+
+        button:focus,
+        .navbar-toggler:focus {
+            outline: 2px solid #0d6efd;
+            outline-offset: 2px;
+        }
+
+        /* Mejorar contraste para accesibilidad */
+        .bg-primary {
+            background-color: #0b5ed7 !important;
+        }
+
+        .btn-primary {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        /* Asegurar que el texto sea legible */
+        .text-white {
+            color: #fff !important;
+        }
+
+        /* Mejorar espaciado en móviles */
+        @media (max-width: 414px) {
+            .container-fluid.p-5 {
+                padding: 2rem 1rem !important;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .accordion-button {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+/* Estilos para el botón Back to Top CENTRADO */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+            transform: translateX(-50%) translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
