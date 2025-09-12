@@ -35,15 +35,6 @@ Investigación necesariamente útil sobre el ecosistema móvil desarrollada como
 6. Accesibilidad y usabilidad
 7. Seguridad y privacidad
 
-## Estructura del Proyecto
-PaginaWebResposiva/
-├── index.html
-├── assets/
-│ ├── style/styles.css
-│ ├── scripts/script.js
-│ └── img/
-└── README.md
-
 ## Autor
 **Diego Alonso González Gándara**  
 Estudiante de Ingeniería en Redes y Telecomunicaciones 
