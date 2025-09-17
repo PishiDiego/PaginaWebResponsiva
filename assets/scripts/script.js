@@ -32,20 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Cerrar menú hamburguesa al hacer clic en un enlace (solo en móviles)
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth < 992) { // Solo en dispositivos móviles
-                navbarToggler.classList.add('collapsed');
-                navbarCollapse.classList.remove('show');
-            }
-        });
-    });
-});
 
 
 // Ocultar menú hamburguesa al hacer scroll
@@ -71,7 +57,7 @@ window.addEventListener('scroll', function() {
         closeMenu();
     }
     
-    if (scrollTop > lastScrollTop && scrollTop > 70) {
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
         // Scroll hacia abajo - ocultar navbar
         navbar.classList.add('hide');
     } else {
