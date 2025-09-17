@@ -233,28 +233,28 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
 
-/* Mejora de focus para dispositivos móviles */
-@media screen and (max-width: 858px) {
-    /* Mejorar la experiencia de selección de texto */
-     h1, h2, h3, h4, h5, h6, span {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-        -webkit-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
-    }
-    
-    /* Mejorar el contraste al seleccionar texto */
-    ::selection {
-        background: rgba(76, 179, 212, 0.3);
-        color: #000;
-    }
-    
-    /* Estilo para inputs y textareas en foco */
-    input:focus, textarea:focus {
-        box-shadow: 0 0 5px rgba(76, 179, 212, 0.5);
-        border-color: #4cb3d4;
-    }
+header {
+    transition: transform 0.3s ease-in-out !important;
 }
 
+/* Mejora de focus para dispositivos móviles */
+@media screen and (max-width: 858px) {
+    p, h1, h2, h3, h4, h5, h6, span, a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1) !important;
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        user-select: text !important;
+    }
+    
+    ::selection {
+        background: rgba(76, 179, 212, 0.3) !important;
+        color: #000 !important;
+    }
+    
+    input:focus, textarea:focus {
+        box-shadow: 0 0 5px rgba(76, 179, 212, 0.5) !important;
+        border-color: #4cb3d4 !important;
+    }
+}
 
