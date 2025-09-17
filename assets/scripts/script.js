@@ -46,3 +46,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Ocultar menú hamburguesa al hacer scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector('nav');
+const menu = document.querySelector('#menu');
+const hamburger = document.querySelector('.hamburger');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scroll hacia abajo - ocultar menú
+        navbar.classList.add('hide');
+    } else {
+        // Scroll hacia arriba - mostrar menú
+        navbar.classList.remove('hide');
+    }
+    
+    lastScrollTop = scrollTop;
+    
+    // Cerrar menú hamburguesa si está abierto al hacer scroll
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
+});
+
+// Mejorar la experiencia táctil en dispositivos móviles
+document.addEventListener('touchstart', function() {}, {passive: true});
+
+
