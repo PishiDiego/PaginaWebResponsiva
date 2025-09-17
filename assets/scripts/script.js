@@ -74,6 +74,8 @@ window.addEventListener('scroll', function() {
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         // Scroll hacia abajo - ocultar navbar
         navbar.classList.add('hide');
+
+    }
     
     lastScrollTop = scrollTop;
 });
@@ -89,4 +91,5 @@ window.addEventListener('scroll', function() {
     menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
 });
+
 
