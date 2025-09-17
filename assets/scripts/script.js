@@ -48,3 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// Cerrar menú hamburguesa al hacer clic fuera (solo en móviles)
+document.addEventListener('click', function(event) {
+    if (window.innerWidth < 992) { // Solo en dispositivos móviles
+        const isClickInsideMenu = navbarCollapse.contains(event.target);
+        const isClickOnToggler = navbarToggler.contains(event.target);
+        
+        // Si el clic fue fuera del menú y fuera del botón toggler
+        if (!isClickInsideMenu && !isClickOnToggler && navbarCollapse.classList.contains('show')) {
+            navbarToggler.classList.add('collapsed');
+            navbarCollapse.classList.remove('show');
+        }
+    }
+});
