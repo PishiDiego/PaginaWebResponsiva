@@ -46,33 +46,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 // Ocultar menú hamburguesa al hacer scroll
 let lastScrollTop = 0;
 const navbar = document.querySelector('nav');
 const menu = document.querySelector('#menu');
 const hamburger = document.querySelector('.hamburger');
+let menuManuallyOpened = false;
 
+// Función para cerrar el menú
+function closeMenu() {
+    menu.classList.remove('active');
+    hamburger.classList.remove('active');
+    menuManuallyOpened = false;
+}
+
+// Evento de scroll
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
+    // Solo cerrar el menú si está abierto
+    if (menu.classList.contains('active')) {
+        closeMenu();
+    }
+    
     if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scroll hacia abajo - ocultar menú
+        // Scroll hacia abajo - ocultar navbar
         navbar.classList.add('hide');
     } else {
-        // Scroll hacia arriba - mostrar menú
+        // Scroll hacia arriba - mostrar navbar
         navbar.classList.remove('hide');
     }
     
     lastScrollTop = scrollTop;
-    
-    // Cerrar menú hamburguesa si está abierto al hacer scroll
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
 });
 
-// Mejorar la experiencia táctil en dispositivos móviles
-document.addEventListener('touchstart', function() {}, {passive: true});
-
-
+// Evento para abrir/cerrar menú con el botón hamburguesa
+    hamburger.addEventListener('click', function() {
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    menuManuallyOpened = menu.classList.contains('active');
+});
+// Cerrar menú al hacer clic en un enlace (opcional)
+    const menuLinks = document.querySelectorAll('#menu a');
+    menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
