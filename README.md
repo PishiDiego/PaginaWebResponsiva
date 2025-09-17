@@ -17,7 +17,7 @@ Investigación necesariamente útil sobre el ecosistema móvil desarrollada como
 - Contenido académico con referencias APA
 
 ## Demo
-**URL del proyecto**: https://pishidiego.github.io/PaginaWebResposiva/
+**URL del proyecto**: https://pishidiego.github.io/PaginaWebResponsiva/
 
 ## Tecnologías Utilizadas
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
