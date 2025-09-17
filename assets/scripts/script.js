@@ -71,25 +71,26 @@ window.addEventListener('scroll', function() {
         closeMenu();
     }
     
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
+    if (scrollTop > lastScrollTop && scrollTop > 70) {
         // Scroll hacia abajo - ocultar navbar
         navbar.classList.add('hide');
-
+    } else {
+        // Scroll hacia arriba - mostrar navbar
+        navbar.classList.add('hide');
     }
     
     lastScrollTop = scrollTop;
 });
 
 // Evento para abrir/cerrar menú con el botón hamburguesa
-    hamburger.addEventListener('click', function() {
+hamburger.addEventListener('click', function() {
     menu.classList.toggle('active');
     hamburger.classList.toggle('active');
     menuManuallyOpened = menu.classList.contains('active');
 });
+
 // Cerrar menú al hacer clic en un enlace (opcional)
-    const menuLinks = document.querySelectorAll('#menu a');
-    menuLinks.forEach(link => {
+const menuLinks = document.querySelectorAll('#menu a');
+menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
 });
-
-
