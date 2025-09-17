@@ -1,4 +1,4 @@
-# Pagina Web Resposiva
+# Pagina Web Responsiva
 # Proyecto de Investigación en Desarrollo Móvil
 
 ## Introducción
