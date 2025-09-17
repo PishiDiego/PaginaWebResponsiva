@@ -10,6 +10,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
 // Función para volver al inicio
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({
@@ -73,10 +74,6 @@ window.addEventListener('scroll', function() {
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         // Scroll hacia abajo - ocultar navbar
         navbar.classList.add('hide');
-    } else {
-        // Scroll hacia arriba - mostrar navbar
-        navbar.classList.remove('hide');
-    }
     
     lastScrollTop = scrollTop;
 });
@@ -92,3 +89,4 @@ window.addEventListener('scroll', function() {
     menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
 });
+
